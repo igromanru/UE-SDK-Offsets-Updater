@@ -8,9 +8,9 @@
             "type": "node",
             "request": "launch",
             "name": "Start program",
-            "program": "${workspaceFolder}/sot-offsets-updater.js",
+            "program": "${workspaceFolder}/offsets-updater.js",
             "args": [
-                "D:/Git/CPP/gummy8unny-SoT-external-ESP/Offsets.h",
+                "${workspaceFolder}/../Offsets.h",
                 "D:/Git/SDKs/SoT-SDK/SDK"
             ]
         }
