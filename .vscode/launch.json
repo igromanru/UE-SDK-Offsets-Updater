@@ -10,8 +10,8 @@
             "name": "Start program",
             "program": "${workspaceFolder}/offsets-updater.js",
             "args": [
-                "${workspaceFolder}/../Offsets.h",
-                "D:/Git/SDKs/SoT-SDK/SDK"
+                "../Offsets.h",
+                "D:/Git/Private/SDKs/SoT-SDK/SDK"
             ]
         }
     ]

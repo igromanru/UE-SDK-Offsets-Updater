@@ -1,0 +1,21 @@
+{
+  "name": "offsets-updater",
+  "version": "1.0.0",
+  "description": "Unreal Engine SDK Offsets Updater",
+  "main": "offsets-updater.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/igromanru/UE-SDK-Offsets-Updater.git"
+  },
+  "author": "Igromanru",
+  "license": "NPOSL-3.0",
+  "bugs": {
+    "url": "https://github.com/igromanru/UE-SDK-Offsets-Updater/issues"
+  },
+  "homepage": "https://github.com/igromanru/UE-SDK-Offsets-Updater#readme"
+}
