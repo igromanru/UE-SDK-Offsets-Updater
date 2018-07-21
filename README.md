@@ -20,9 +20,9 @@ Example:
 ```cpp
 // :APlayerController:PlayerCameraManager:SoT_Engine_classes.hpp
 ```
-We want to have the offset from the property *PlayerCameraManager* in the class *APlayerController*. And the script should look for it in the file *SoT_Engine_classes.hpp*.
+We want to get the offset from the property *PlayerCameraManager* in the class *APlayerController*. And the script should look for it in the file *SoT_Engine_classes.hpp*.  
 
-Under the comment we need a static constexp int with this format:
+Under the comment we need a static constexp int with following format:
 ```
 static constexpr int (any property name) = 0x(anything);
 ```
@@ -41,7 +41,7 @@ class Offsets
 public:
 	// :APlayerController:PlayerCameraManager:SoT_Engine_classes.hpp
 	static constexpr int PlayerCameraManager = 0x0518;
-			
+
 	// :AAthenaCharacter:WieldedItemComponent:SoT_Athena_classes.hpp
 	static constexpr int WieldedItemComponent = 0x820;
 
