@@ -31,18 +31,17 @@ function updateOffsets(offsetsFilePath, sdkPath) {
     }
     const offsetsFileArray = offsetsFile.split(endOfLine);
     if(offsetsFileArray && offsetsFileArray.length > 1) {
-        const offsetStartRegEx = new RegExp('\/\/ :(.*?:.*?:.*?)$', 'gm');
-        const offsetRegEx = /^.*?static\s+?constexpr\s+?int.*?=\s+?0x(.*?);/gm;
-        for (var i = 0; i < offsetsFileArray.length; i++) {                  
-            var matches = offsetStartRegEx.exec(offsetsFileArray[i]);
+        const offsetStartRegEx = /\/\/ :(.*?:.*?:.*?)$/gm;
+        //const offsetRegEx = /^.*?static\s+?constexpr\s+?int.*?=\s+?0x(.*?);/gm;
+        for (var i = 0; i < offsetsFileArray.length; i++) { 
+            console.log(offsetsFileArray[i]);
+            const matches = offsetStartRegEx.exec(offsetsFileArray[i]);
             if(matches && matches.length > 0) {
                 var offset = getOffsetFromSdk(matches[1], sdkPath);
-                if(offset) {                    
-                    ++i;
-                    const line = offsetsFileArray[i];
-                    var offsetMatches = offsetRegEx.exec(line);
-                    if(offsetMatches && offsetMatches.length > 1) {
-                        offsetsFileArray[i] = line.replace(offsetMatches[1], offset);
+                if(offset) {
+                    const replacedLine = offsetsFileArray[i+1].replace(/0x.*?;/gm, `0x${offset};`);
+                    if(replacedLine) {
+                        offsetsFileArray[i+1] = replacedLine;
                     }
                 }
             }
