@@ -33,8 +33,7 @@ function updateOffsets(offsetsFilePath, sdkPath) {
     if(offsetsFileArray && offsetsFileArray.length > 1) {
         const offsetStartRegEx = /\/\/ :(.*?:.*?:.*?)$/gm;
         //const offsetRegEx = /^.*?static\s+?constexpr\s+?int.*?=\s+?0x(.*?);/gm;
-        for (var i = 0; i < offsetsFileArray.length; i++) { 
-            console.log(offsetsFileArray[i]);
+        for (var i = 0; i < offsetsFileArray.length; i++) {
             const matches = offsetStartRegEx.exec(offsetsFileArray[i]);
             if(matches && matches.length > 0) {
                 var offset = getOffsetFromSdk(matches[1], sdkPath);
