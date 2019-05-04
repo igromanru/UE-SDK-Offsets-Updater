@@ -78,7 +78,7 @@ function getOffsetFromSdk(dataString, sdkPath) {
 
         if(fs.existsSync(filePath)) {            
             const classRegEx = new RegExp(`^(?:class|struct) ${className}(?:\\s|$)`, 'gm');
-            const offsetRegEx = new RegExp(`.*?${offsetName};.*? \/\/ 0x(.*?)\\(0x`, 'gm');
+            const offsetRegEx = new RegExp(`.*? ${offsetName};.*? \/\/ 0x(.*?)\\(0x`, 'gm');
             const fileAsArray = fs.readFileSync(filePath, 'utf8').split(endOfLine);
             
             var switchToOffset = false;
