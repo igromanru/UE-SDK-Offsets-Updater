@@ -1,6 +1,11 @@
 # Unreal Engine SDK Offsets Updater
 The script can automaticly update a C++ class with a special format from an Unreal Engine SDK dump.
 
+# This Project is Deprecated
+I don't like node.js anymore and see no reason to develep an offsets updater that also works under Linux, most UE games are Windows only.  
+I recommend you to use the latest Unreal Engine Offsets Updater made with AutoIt.
+https://github.com/igromanru/UE-SDK-Offsets-Updater-AutoIt
+
 ## Requirements
 [node.js](https://nodejs.org) v8.11 or later
 
